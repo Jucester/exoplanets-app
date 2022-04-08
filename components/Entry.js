@@ -2,7 +2,6 @@ import React from "react";
 import Router from "next/router";
 
 export const Entry = (props) => {
-  console.log('test', props.cont);
   return (
     <div className="mt-4 col-sm-4">
       <div className="card">
@@ -25,17 +24,5 @@ export const Entry = (props) => {
         </div>
       </div>
     </div>
-
-    //  <div className="mt-4 col-sm-4">
-    //   <div className="">
-      
-    //     <div className="w3-container w3-white">
-    //       <p>
-    //         <strong> Planet Name: </strong> {props.cont.fields.planetName}
-    //       </p>
-    //       <p> {props.cont.fields.description}</p>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };

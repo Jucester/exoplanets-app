@@ -1,6 +1,5 @@
-import { useRouter } from "next/router";
 import Container from "../../components/Container";
-import { contentfulConnect  } from "../../utils/contentful.ts";
+import { contentfulConnect  } from "../../utils/contentful";
 
 // This function gets called at build time
 export const getStaticPaths = async () => {
@@ -35,17 +34,9 @@ export const getStaticProps = async ({ params }) => {
 	}
 }
 
-const Post = (props) => {
-	const router = useRouter();
-	const object = router.query;
-
+const Planet = (props) => {
 	return (
 		<Container>
-			{/* <h1> HOLA </h1>
-			<h2> {props.planet.fields.planetName} </h2>
-
-			<p> {props.planet.body} </p> */}
-
 			<div className="container">
 				<div className="row">
 					<div className="col-md-5">
@@ -89,4 +80,4 @@ const Post = (props) => {
 	);
 };
 
-export default Post;
+export default Planet;
