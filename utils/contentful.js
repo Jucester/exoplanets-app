@@ -16,7 +16,7 @@ export const contentfulManagement = async () => {
         accessToken: process.env.REACT_APP_MANAGEMENT_TOKEN
     });
 
-    let space = await client.getSpace('p13ln2f285zx');
+    let space = await client.getSpace(process.env.REACT_APP_SPACE_ID);
     let env = await space.getEnvironment('master');
     return env;
 }
